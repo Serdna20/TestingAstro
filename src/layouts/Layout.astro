@@ -1,0 +1,60 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+const headerSections = [
+	{name: "Microsoft 365"},
+	{name: "Teams"},
+	{name: "Copilot"},
+	{name: "Windows"},
+	{name: "Xbox"},
+	{name: "Soporte"},
+]
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<header class="container">
+			<!-- Left header -->
+			<div class="flex justify-between bg-red-500">
+				<a href="">
+					<img src="" alt="">
+				</a>
+				{
+					headerSections.map((headerSections) => 
+						<a href="" class="group">
+							<p>
+								{headerSections.name}
+								<div class="h-[5%] bg-red-500 group-hover:bg-slate-950">.</div>
+							</p>
+							
+						</a>
+					)
+				}
+			</div>
+			<!-- Right header -->
+			<div>
+				<a href=""></a>
+				<a href=""></a>
+				<a href=""></a>
+				<a href=""></a>
+			</div>
+		</header>
+
+
+		<slot />
+	</body>
+</html>
+<style is:global>
+</style>
