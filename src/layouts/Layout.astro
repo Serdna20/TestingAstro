@@ -27,18 +27,17 @@ const headerSections = [
 	<body>
 		<header class="container">
 			<!-- Left header -->
-			<div class="flex justify-between bg-red-500">
+			<div class="flex justify-between align-middle bg-white">
 				<a href="">
-					<img src="" alt="">
+					<img src="/public/windows.png" class="w-" alt="">
 				</a>
 				{
 					headerSections.map((headerSections) => 
-						<a href="" class="group">
+						<a href="" class="group flex justify-center items-center flex-col">
 							<p>
 								{headerSections.name}
-								<div class="h-[5%] bg-red-500 group-hover:bg-slate-950">.</div>
-							</p>
-							
+								<div class="h-[5%] w-full text-white bg-white group-hover:bg-slate-950">.</div>
+							</p>							
 						</a>
 					)
 				}
